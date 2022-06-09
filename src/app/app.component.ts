@@ -167,15 +167,15 @@ export class AppComponent {
     //const xy = [2672038.18415, -3587680.74832];
     //const coor = fromLonLat(xy);
     
-    //this.AddVectorLayer();
+    this.AddVectorLayer();
 
     this.map = new Map({
       target: 'map',
       layers: [baseMaps],
-      view: new View({
-        center: [2672038.18415 , -3587680.74832],
-        zoom: 4
-      })
+      // view: new View({
+      //   center: [2672038.18415 , -3587680.74832],
+      //   zoom: 4
+      // })
     });
     
 
