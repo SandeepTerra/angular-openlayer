@@ -164,16 +164,16 @@ export class AppComponent {
       layers: [googlesat, osm, wmslayer]
     } as GroupLayerOptions);
     
-    const washingtonLonLat = [2672038.18415, -3587680.74832];
-    const washingtonWebMercator = fromLonLat(washingtonLonLat);
-
+    //const xy = [2672038.18415, -3587680.74832];
+    //const coor = fromLonLat(xy);
+    
     //this.AddVectorLayer();
 
     this.map = new Map({
       target: 'map',
       layers: [baseMaps],
       view: new View({
-        center: [washingtonWebMercator[0] , washingtonWebMercator[1]],
+        center: [2672038.18415 , -3587680.74832],
         zoom: 4
       })
     });
