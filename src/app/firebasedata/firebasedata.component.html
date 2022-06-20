@@ -1,0 +1,38 @@
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-sm-4">
+                <p class="text-primary">Add data to firebasedata</p>
+                <div>
+                    <input typ="text" class="form-control" [(ngModel)]="userdetail.name" placeholder="name">
+                    <input typ="text" class="form-control mt-1" [(ngModel)]="userdetail.age" placeholder="age">
+                    <input typ="text" class="form-control mt-1" [(ngModel)]="userdetail.gender" placeholder="gender">
+                    <input typ="text" class="form-control mt-1" [(ngModel)]="userdetail.address" placeholder="address">
+                    <button type="button" class="btn btn-primary mt-1" (click)="addData();">Add</button>
+                    <p>{{ message }}</p>
+                </div>
+        </div>
+        <div class="col-sm-8">
+            <p class="text-primary">Show firebasedata data</p>
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Address</th>
+                    <th>Delete</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let userd of userdata;">
+                    <td>{{userd.name}}</td>
+                    <td>{{userd.age}}</td>
+                    <td>{{userd.gender}}</td>
+                    <td>{{userd.address}}</td>
+                    <td (click)="deleteData(userd.key);" style="cursor:pointer;" class="text-danger">Delete</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>
